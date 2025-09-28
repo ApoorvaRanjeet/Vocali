@@ -1,0 +1,19 @@
+.voice-ext-overlay {
+  position: absolute;
+  z-index: 2147483647 !important;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.voice-ext-hitbox {
+  position: absolute;
+  z-index: 2147483646 !important;
+  background: rgba(0,0,0,0.03);
+  border: 2px dashed rgba(0,0,0,0.06);
+  pointer-events: none;
+}

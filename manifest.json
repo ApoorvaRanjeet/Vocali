@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Motor Impairments — Voice Web Controller",
+  "description": "Voice-first navigation for users with motor impairments. Scroll, click, type, and search using only voice.",
+  "version": "0.4",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Voice Controller"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://*.google.com/*",
+    "https://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>",
+        "https://*.google.com/*",
+        "https://*.youtube.com/*"
+      ],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
